@@ -50,26 +50,6 @@ select {
     font: inherit;
 }
 
-/*
-    8. Avoid text overflows
-  */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/*
-    9. Create a root stacking context
-  */
-#root,
-#__next {
-    isolation: isolate;
-}
 
 .nav-wrapper {
     width: 100%;
@@ -77,6 +57,7 @@ h6 {
     top: 0px;
     background-color: var(--light-color);
     position: fixed;
+    z-index: 1;
 }
 
 .navbar {
@@ -124,6 +105,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    isolation: isolate;
 }
 
 .slider-button {
@@ -173,6 +155,7 @@ header {
 
 main {
     width: 100%;
+    isolation: isolate;
 }
 
 .filter-bar {
